@@ -21,7 +21,7 @@ function Banner() {
             <CgPlayButtonO size={24}/>
           </button>
           <button className=" border border-solid text-white bg-custom-blue border-black w-[161px] rounded-[57px] flex justify-center items-center gap-4 text-sm">
-            View Intro
+            Explore Now
           </button>
         </div>
       </div>
