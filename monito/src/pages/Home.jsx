@@ -8,10 +8,7 @@ const Home = () => {
   return (
     <>
       <HeroCard />
-      <div className=" ps-3">
-        <p className=" text-sm">Whats new?</p>
-        <p className=" text-lg font-bold">Take A Look At Some Of Our Pets</p>
-      </div>
+      
       <Cards />
       <Banner />
       <div className=" ps-3">
