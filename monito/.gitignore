@@ -24,12 +24,7 @@ yarn-error.log*
 
 #comment component
 
-src/components/Banner.jsx
-src/components/Cards.jsx
-src/components/HeroCard.jsx
-src/components/NavBar.jsx
-src/pages/
-styles.css
+
 
 src/api/petsAPI.js
 src/assets/
