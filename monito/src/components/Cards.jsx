@@ -20,7 +20,7 @@ const Cards = () => {
 
   return (
     <>
-      <div className=" flex justify-between p-10">
+      <div className=" flex justify-between ">
       <div className=" ps-3">
         <p className=" text-sm">Whats new?</p>
         <p className=" text-lg font-bold">Take A Look At Some Of Our Pets</p>
@@ -30,7 +30,7 @@ const Cards = () => {
           <RiArrowRightSLine size={24} />
         </button>
       </div>
-      <div className="grid grid-cols-2 gap-4 md:grid md:grid-cols-4 p-10 ">
+      <div className="grid grid-cols-2 gap-4 md:grid md:grid-cols-4  ">
         {pets?.map((pet) => (
           <div key={pet.id} className=" bg-white rounded-[12px]">
             <div className=" p-4 ">

@@ -10,10 +10,10 @@ import "../styles.css";
 const HeroCard = () => {
   return (
     <>
-      <img className="w-full" src={DesktopBanner} />
+      <img className="w-full hidden md:block " src={DesktopBanner} />
       <Swiper className="mySwiper ">
         <SwiperSlide>
-          <img className="md:hidden" src={HeroBanner} />
+          <img className="md:hidden " src={HeroBanner} />
         </SwiperSlide>
         <SwiperSlide>
           <img className="md:hidden" src={HeroBanner2} />

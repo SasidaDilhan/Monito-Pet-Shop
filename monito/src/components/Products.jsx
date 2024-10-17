@@ -20,7 +20,7 @@ const Products = () => {
   }, []);
   return (
     <>
-      <div className=" flex justify-between p-10">
+      <div className=" flex justify-between">
         <div className=" ps-3">
           <p className=" text-sm font-bold">
             Hard to choose right products for your pets?
@@ -32,7 +32,7 @@ const Products = () => {
           <RiArrowRightSLine size={24} />
         </button>
       </div>
-      <div className="grid grid-cols-2 gap-4 md:grid md:grid-cols-4 p-10 ">
+      <div className="grid grid-cols-2 gap-4 md:grid md:grid-cols-4 ">
         {products?.map((product) => (
           <div key={product.id} className=" bg-white rounded-[12px] ">
             <div className=" p-4 space-y-2">

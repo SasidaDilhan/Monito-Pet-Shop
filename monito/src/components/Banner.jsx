@@ -6,7 +6,7 @@ import { CgPlayButtonO } from "react-icons/cg";
 function Banner() {
   return (
     <>
-      <div className=" ps-3">
+      <div className=" ps-3 lg:hidden block md:block">
         <p className=" text-sm">You already know ?</p>
         <p className=" text-lg font-bold">Useful Pet Knowledge</p>
       </div>
@@ -37,9 +37,9 @@ function Banner() {
         </div>
       </div>
 
-      <div className="relative p-5 md:p-10 ">
+      <div className="relative mb-20 ">
         <img
-          className="w-full h-auto p-2 md:p-5 object-cover"
+          className="w-full h-auto p-2  object-cover"
           src={Banner2}
           alt="Banner"
         />

@@ -12,29 +12,53 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { MdFavorite, MdHelp } from "react-icons/md";
 import { FaUserFriends, FaWallet } from "react-icons/fa";
 import LogoName from "../assets/Frame.png";
+import Flag from "../assets/Frame 45.png";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
 
   return (
-    <div className="max-w-[1640px] mx-auto flex justify-between items-center p-4">
+    <div className="w-full absolute z-30 bg-transparent  mx-auto flex justify-between items-center p-4 md:flex md:justify-start ">
       {/* left side */}
-      <div className="flex items-center">
-        <div onClick={() => setNav(!nav)} className="cursor-pointer">
+      <div className="flex items-center ">
+        <div onClick={() => setNav(!nav)} className="cursor-pointer md:hidden">
           <AiOutlineMenu size={30} />
         </div>
       </div>
       {/* search bar */}
-      <div className="  ">
+      <div className=" md:hidden ">
         <img src={LogoName} />
       </div>
-      <FaSearch  size={30}/>
-      {/* cart button */}
+      <div className=" w-full  md:flex md:justify-between md:items-center md:px-36 hidden font-bold">
+        <img src={LogoName} />
+        <div>Home</div>
+        <div>Category</div>
+        <div>About</div>
+        <div>Contact</div>
 
-      <button className="bg-black text-white rounded-full boder border-black  px-5  md:flex hidden py-2">
-        <BsFillCartFill size={20} className="mr-2" />{" "}
-        <p className="text-yellow-300 font-bold capitalize">cart</p>
-      </button>
+        <div className="relative flex items-center ">
+          <AiOutlineSearch
+            className="absolute left-3 text-gray-400 "
+            size={20}
+          />
+          <input
+            type="text"
+            className="pl-10 p-2 border border-gray-300 rounded-[46px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Search..."
+          />
+        </div>
+        <button className=" bg-custom-blue text-white px-6 p-2 rounded-[57px] ">
+          Join the community
+        </button>
+
+        <div className=" flex gap-2 items-center ">
+          <img src={Flag} />
+          <p className=" text-[16px]">VIND</p>
+          <MdOutlineKeyboardArrowDown size={24}/>
+        </div>
+      </div>
+      <FaSearch className=" md:hidden" size={30} />
 
       {/* Mobile menu */}
       {/* overlay */}

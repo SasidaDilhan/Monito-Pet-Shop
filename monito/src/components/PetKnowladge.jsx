@@ -6,7 +6,7 @@ import { RiArrowRightSLine } from "react-icons/ri";
 const PetKnowladge = () => {
   return (
     <>
-      <div className=" space-y-5 p-5 md:grid md:grid-cols-3">
+      <div className=" space-y-5  md:grid md:grid-cols-3">
         {knowladgeData.map((data) => (
           <div className=" bg-white rounded-[12px] p-2 flex flex-col space-y-4">
             <img src={data.image} />
