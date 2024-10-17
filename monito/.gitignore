@@ -22,9 +22,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-#comment component
 
 
 
-src/api/petsAPI.js
-src/assets/
+
