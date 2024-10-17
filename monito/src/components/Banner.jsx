@@ -26,18 +26,18 @@ function Banner() {
             that can meet your needs!
           </p>
           <div className="flex gap-3 md:gap-5">
-            <button className="p-2 md:p-3 w-full md:w-[161px] border border-solid border-black rounded-[57px] flex justify-center items-center gap-2 md:gap-4 text-sm">
+            <button className="p-2 md:p-3 w-[163px] md:w-[161px] border border-solid border-black rounded-[57px] flex justify-center items-center gap-2 md:gap-4 text-sm">
               View Intro
               <CgPlayButtonO size={24} />
             </button>
-            <button className="border border-solid text-white bg-custom-blue border-black w-full md:w-[161px] rounded-[57px] flex justify-center items-center gap-2 md:gap-4 text-sm">
+            <button className="border border-solid text-white bg-custom-blue border-black  md:w-[161px] w-[163px] rounded-[57px] flex justify-center items-center gap-2 md:gap-4 text-sm">
               Explore Now
             </button>
           </div>
         </div>
       </div>
 
-      <div className="relative mb-20 ">
+      <div className="relative mb-20 hidden">
         <img
           className="w-full h-auto p-2  object-cover"
           src={Banner2}

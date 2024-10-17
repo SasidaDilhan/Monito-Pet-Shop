@@ -10,11 +10,11 @@ import Seller6 from "../assets/seller6.png";
 const Sellers = () => {
   return (
     <>
-      <div className=" flex items-center gap-2">
+      <div className=" hidden md:flex items-center gap-2">
         <p className=" text-[16px]">Proud to be part of </p>
         <p className="text-[24px] font-bold" >Pet Seller</p>
       </div>
-      <div className=" ">
+      <div className="hidden ">
         <img src={Seller1} />
         <img src={Seller2} />
         <img src={Seller3} />

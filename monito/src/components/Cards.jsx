@@ -25,7 +25,7 @@ const Cards = () => {
         <p className=" text-sm">Whats new?</p>
         <p className=" text-lg font-bold">Take A Look At Some Of Our Pets</p>
       </div>
-      <button className=" p-5 border border-solid border-black  w-[251px] rounded-[57px] flex justify-center items-center gap-4 text-sm">
+      <button className=" hidden p-5 border border-solid border-black  w-[251px] rounded-[57px] md:flex justify-center items-center gap-4 text-sm">
           View more
           <RiArrowRightSLine size={24} />
         </button>

@@ -30,7 +30,7 @@ const NavBar = () => {
       <div className=" md:hidden ">
         <img src={LogoName} />
       </div>
-      <div className=" w-full  md:flex md:justify-between md:items-center md:px-36 hidden font-bold">
+      <div className=" w-full  md:flex md:justify-between md:items-center md:px-20 hidden font-bold">
         <img src={LogoName} />
         <div>Home</div>
         <div>Category</div>

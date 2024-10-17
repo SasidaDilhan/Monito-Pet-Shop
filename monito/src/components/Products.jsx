@@ -20,19 +20,19 @@ const Products = () => {
   }, []);
   return (
     <>
-      <div className=" flex justify-between">
+      <div className=" hidden md:flex justify-between">
         <div className=" ps-3">
           <p className=" text-sm font-bold">
             Hard to choose right products for your pets?
           </p>
           <p className=" text-lg font-extrabold">Our Products</p>
         </div>
-        <button className=" p-5 border border-solid border-black  w-[200px] rounded-[57px] flex justify-center items-center gap-4 text-sm">
+        <button className="  p-5 border border-solid border-black  w-[200px] rounded-[57px] flex justify-center items-center gap-4 text-sm">
           View more
           <RiArrowRightSLine size={24} />
         </button>
       </div>
-      <div className="grid grid-cols-2 gap-4 md:grid md:grid-cols-4 ">
+      <div className="hidden gap-4 md:grid md:grid-cols-4 ">
         {products?.map((product) => (
           <div key={product.id} className=" bg-white rounded-[12px] ">
             <div className=" p-4 space-y-2">
@@ -59,7 +59,7 @@ const Products = () => {
         ))}
       </div>
       <div className=" p-5">
-        <button className=" md:hidden p-5 border border-solid border-black  w-full rounded-[57px] flex justify-center items-center gap-4 text-sm">
+        <button className=" hidden md:hidden p-5 border border-solid border-black  w-full rounded-[57px] md:flex justify-center items-center gap-4 text-sm">
           View more
           <RiArrowRightSLine size={24} />
         </button>
