@@ -8,6 +8,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { BsChatLeftDots } from "react-icons/bs";
+// import "../styles2.css";
 import "../styles.css";
 import { IoShareSocialOutline } from "react-icons/io5";
 
@@ -21,21 +22,24 @@ import Icon1 from "../assets/petIcon1.png";
 import Icon2 from "../assets/petIcon2.png";
 
 // import required modules
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { FreeMode, Navigation, Thumbs, Pagination } from "swiper/modules";
 import Customers from "./Customers";
 import Puppies from "./Puppies";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
+import { useCustomers } from "../store/Store";
 
 const OnePet = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
+  const { customer } = useCustomers();
+
   return (
     <>
-      <div className="fixed top-0 left-0 w-full z-30  ">
+      <div className=" sticky w-full z-30  ">
         <NavBar />
       </div>
-      <div className=" hidden  w-[1880px] corder border-black bg-white md:flex mt-36 m-auto space-x-5">
+      <div className=" hidden mx-20 border-black bg-white md:flex   m-auto space-x-5">
         <div className=" w-[560px] p-3">
           <Swiper
             style={{
@@ -160,11 +164,28 @@ const OnePet = () => {
           </div>
         </div>
       </div>
-      <div className=" hidden md:block">
+      <div className=" hidden md:block px-20 mt-5">
         {" "}
-        <Customers />
+        <div className=" ">
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={30}
+            freeMode={true}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[FreeMode, Pagination]}
+            className="mySwiper"
+          >
+            {customer?.map((cus) => (
+              <SwiperSlide>
+                <img  src={cus.image} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
         <div className=" p-2">
-            <p>What's new</p>
+          <p>What's new</p>
           <p className=" text-[24px] font-bold text-custom-blue">
             See more puppies
           </p>
@@ -326,7 +347,7 @@ const OnePet = () => {
 
         <Puppies />
       </div>
-        <Footer />
+      <Footer />
     </>
   );
 };

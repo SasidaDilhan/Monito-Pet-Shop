@@ -8,7 +8,6 @@ import Sellers from "../components/Sellers";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import MiddleBanner from "../components/MiddleBanner";
-import OnePet from "../components/OnePet";
 
 const Home = () => {
   return (
@@ -24,7 +23,6 @@ const Home = () => {
         <PetKnowladge />
       </div>
       <Footer />
-    
     </>
   );
 };

@@ -3,7 +3,7 @@ import Banner1 from "../assets/CartBanner.png";
 import Banner2 from "../assets/CartBanner2.png";
 import { CgPlayButtonO } from "react-icons/cg";
 import NavBar from "./NavBar";
-import { Select, SelectSection, SelectItem } from "@nextui-org/select";
+
 import { CiFilter } from "react-icons/ci";
 
 import Footer from "./Footer";
@@ -66,17 +66,17 @@ const Cart = () => {
         </div>
       </div>
       <img className="w-full h-[795px] hidden md:block px-10 " src={Banner2} />
-      <div className=" flex justify-between items-center mt-10 md:hidden">
-        <Select
+      <div className=" flex justify-between items-center mt-10 md:hidden mb-5">
+        <select
           label=""
           placeholder="Sort By:"
           labelPlacement="outside"
-          className="max-w-[172px] "
+          className="max-w-[172px] p-2 rounded-[20px]  "
           color=""
           disableSelectorIconRotation
         >
-          <SelectItem>Popular</SelectItem>
-        </Select>
+          <option>Popular</option>
+        </select>
         <div>
           <CiFilter size={24} />
         </div>

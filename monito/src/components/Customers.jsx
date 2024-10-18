@@ -12,15 +12,18 @@ import "../styles.css";
 // Import required modules
 import { FreeMode, Pagination } from "swiper/modules";
 import OnePet from "./OnePet";
+import { useCustomers } from "../store/Store";
 
-const App = () => {
+const Customers = () => {
   const [customers, setCustomers] = useState([]);
+  const { setCustomer } = useCustomers();
 
   useEffect(() => {
     const getCustomerData = async () => {
       try {
         const cusData = await getCustomers();
         setCustomers(cusData);
+        setCustomer(cusData);
       } catch (error) {
         console.log("Fetching customer data failed: " + error);
       }
@@ -62,14 +65,10 @@ const App = () => {
               </div>
             </SwiperSlide>
           )}
-
-        
         </Swiper>
       </div>
-
-      
     </>
   );
 };
 
-export default App;
+export default Customers;

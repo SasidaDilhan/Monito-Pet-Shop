@@ -38,7 +38,7 @@ const NavBar = () => {
 
   return (
     <div
-      className={`w-full fixed z-30 bg-transparent mx-auto flex justify-between items-center p-4 md:flex md:justify-start transition-transform duration-300 ${
+      className={`w-full  z-30 bg-transparent mx-auto flex justify-between items-center p-4 md:flex md:justify-start transition-transform duration-300 ${
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
     >
