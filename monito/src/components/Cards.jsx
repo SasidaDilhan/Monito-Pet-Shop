@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getPets } from "../api/petsAPI";
 import { RiArrowRightSLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Cards = () => {
   const [pets, setPets] = useState([]);
@@ -20,10 +21,10 @@ const Cards = () => {
 
   return (
     <>
-      <div className=" flex justify-between ">
+      <div className=" flex justify-between md:mb-10">
       <div className=" ps-3">
-        <p className=" text-sm">Whats new?</p>
-        <p className=" text-lg font-bold">Take A Look At Some Of Our Pets</p>
+        <p className=" text-[16px]">Whats new?</p>
+        <p className=" text-[24px] text-custom-blue font-extrabold">Take A Look At Some Of Our Pets</p>
       </div>
       <button className=" hidden p-5 border border-solid border-black  w-[251px] rounded-[57px] md:flex justify-center items-center gap-4 text-sm">
           View more
@@ -32,7 +33,7 @@ const Cards = () => {
       </div>
       <div className="grid grid-cols-2 gap-4 md:grid md:grid-cols-4  ">
         {pets?.map((pet) => (
-          <div key={pet.id} className=" bg-white rounded-[12px]">
+          <Link to='/cart' key={pet.id} className=" bg-white rounded-[12px] hover:scale-105 duration-300 hover:cursor-pointer" >
             <div className=" p-4 ">
               <img
                 className=" rounded-[10px] md:w-full"
@@ -52,7 +53,7 @@ const Cards = () => {
                 <p className=" font-bold text-[16px]">Price : {pet.price}</p>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
       <div className=" p-5">

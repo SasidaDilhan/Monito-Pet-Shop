@@ -6,6 +6,7 @@ import {
   FaInstagram,
   FaTwitterSquare,
 } from "react-icons/fa";
+import Logo from "../assets/Logo.png";
 
 import { FaYoutube } from "react-icons/fa6";
 
@@ -13,7 +14,7 @@ function Footer() {
   return (
     <>
       <div
-        className="w-full h-[400px] p-3 md:p-20 "
+        className="w-full h-full p-3 md:p-20 "
         style={{
           background:
             "linear-gradient(90deg, #FCEED5 6%, #FCEED5 75%, #FFE7BA 100%)",
@@ -34,27 +35,45 @@ function Footer() {
             </button>
           </div>
         </div>
+
         <div className=" md:flex">
-          <div className=" w-full  flex gap-3 items-center mt-5 font-bold">
+          <div className=" md:w-full md:gap-16 md:justify-start md:flex  md:items-center  flex gap-3 items-center justify-between mt-5 font-bold">
             <div>Home</div>
             <div>Category</div>
             <div>About</div>
             <div>Contact</div>
           </div>
-          <div className="flex justify-center gap-6 my-6 mb-10">
-            <div className="p-1 border border-gray-300">
+
+          <div className="  flex justify-center gap-6 my-6 mb-10 ">
+            <div className="p-1 ">
               <FaFacebookSquare size={30} />
             </div>
-            <div className="p-1 border border-gray-300">
+            <div className="p-1">
               <FaInstagram size={30} />
             </div>
-            <div className="p-1 border border-gray-300">
+            <div className="p-1">
               <FaTwitterSquare size={30} />
             </div>
-            <div className="p-1 border border-gray-300">
+            <div className="p-1">
               <FaYoutube size={30} />
             </div>
           </div>
+        </div>
+
+        <hr class="  border-t-2 border-gray-300 my-4 md:w-full" />
+
+        <div className=" md:hidden flex  items-center flex-col ">
+          <img width={115} height={40} src={Logo} />
+          <div className=" mt-10 text-gray-500 flex items-center flex-col space-y-4">
+            <p className=" text-[12px]">Terms of Service Privacy Policy</p>
+            <p className=" text-[10px]">© 2022 Monito. All rights reserved.</p>
+          </div>
+        </div>
+
+        <div className=" hidden md:flex md:justify-between md:flex-row mt-10 text-gray-500 flex items-center flex-col space-y-4">
+          <p className=" text-[12px]">Terms of Service Privacy Policy</p>
+          <img width={115} height={40} src={Logo} />
+          <p className=" text-[10px]">© 2022 Monito. All rights reserved.</p>
         </div>
       </div>
     </>

@@ -11,7 +11,7 @@ import { BsFillCartFill, BsFillSaveFill } from "react-icons/bs";
 import { TbTruckDelivery } from "react-icons/tb";
 import { MdFavorite, MdHelp } from "react-icons/md";
 import { FaUserFriends, FaWallet } from "react-icons/fa";
-import LogoName from "../assets/Frame.png";
+import LogoName from "../assets/Logo.png";
 import Flag from "../assets/Frame 45.png";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
@@ -55,7 +55,7 @@ const NavBar = () => {
         <div className=" flex gap-2 items-center ">
           <img src={Flag} />
           <p className=" text-[16px]">VIND</p>
-          <MdOutlineKeyboardArrowDown size={24}/>
+          <MdOutlineKeyboardArrowDown size={24} />
         </div>
       </div>
       <FaSearch className=" md:hidden" size={30} />

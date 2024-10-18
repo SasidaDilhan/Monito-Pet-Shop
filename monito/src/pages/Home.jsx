@@ -7,20 +7,24 @@ import Products from "../components/Products";
 import Sellers from "../components/Sellers";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import MiddleBanner from "../components/MiddleBanner";
+import OnePet from "../components/OnePet";
 
 const Home = () => {
   return (
     <>
-      <NavBar />
+      {/* <NavBar />
       <HeroCard />
       <div className=" md:p-20 p-1">
         <Cards />
         <Banner />
         <Products />
         <Sellers />
+        <MiddleBanner />
         <PetKnowladge />
       </div>
-      <Footer />
+      <Footer /> */}
+      <OnePet />
     </>
   );
 };
