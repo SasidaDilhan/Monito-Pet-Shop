@@ -13,7 +13,7 @@ import OnePet from "../components/OnePet";
 const Home = () => {
   return (
     <>
-      {/* <NavBar />
+      <NavBar />
       <HeroCard />
       <div className=" md:p-20 p-1">
         <Cards />
@@ -23,7 +23,7 @@ const Home = () => {
         <MiddleBanner />
         <PetKnowladge />
       </div>
-      <Footer /> */}
+      <Footer />
       <OnePet />
     </>
   );
