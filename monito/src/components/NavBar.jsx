@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   AiFillTag,
   AiOutlineClose,
@@ -17,9 +16,32 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > scrollY) {
+        setHidden(true); // Hide the navbar when scrolling down
+      } else {
+        setHidden(false); // Show the navbar when scrolling up
+      }
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollY]);
 
   return (
-    <div className="w-full absolute z-30 bg-transparent  mx-auto flex justify-between items-center p-4 md:flex md:justify-start ">
+    <div
+      className={`w-full fixed z-30 bg-transparent mx-auto flex justify-between items-center p-4 md:flex md:justify-start transition-transform duration-300 ${
+        hidden ? "-translate-y-full" : "translate-y-0"
+      }`}
+    >
       {/* left side */}
       <div className="flex items-center ">
         <div onClick={() => setNav(!nav)} className="cursor-pointer md:hidden">
@@ -27,11 +49,11 @@ const NavBar = () => {
         </div>
       </div>
       {/* search bar */}
-      <div className=" md:hidden ">
-        <img src={LogoName} />
+      <div className="md:hidden">
+        <img src={LogoName} alt="Logo" />
       </div>
-      <div className=" w-full  md:flex md:justify-between md:items-center md:px-20 hidden font-bold">
-        <img src={LogoName} />
+      <div className="w-full md:flex md:justify-between md:items-center md:px-20 hidden text-[16px] font-bold">
+        <img src={LogoName} alt="Logo" />
         <div>Home</div>
         <div>Category</div>
         <div>About</div>
@@ -48,17 +70,17 @@ const NavBar = () => {
             placeholder="Search..."
           />
         </div>
-        <button className=" bg-custom-blue text-white px-6 p-2 rounded-[57px] ">
+        <button className="bg-custom-blue text-white px-6 p-2 rounded-[57px]">
           Join the community
         </button>
 
-        <div className=" flex gap-2 items-center ">
-          <img src={Flag} />
-          <p className=" text-[16px]">VIND</p>
+        <div className="flex gap-2 items-center">
+          <img src={Flag} alt="Flag" />
+          <p className="text-[16px]">VIND</p>
           <MdOutlineKeyboardArrowDown size={24} />
         </div>
       </div>
-      <FaSearch className=" md:hidden" size={30} />
+      <FaSearch className="md:hidden" size={30} />
 
       {/* Mobile menu */}
       {/* overlay */}
@@ -94,7 +116,7 @@ const NavBar = () => {
               <MdFavorite size={25} className="mr-4" /> Favorite
             </li>
             <li className="flex py-4 text-xl">
-              <FaWallet size={25} className="mr-4" /> Walet
+              <FaWallet size={25} className="mr-4" /> Wallet
             </li>
             <li className="flex py-4 text-xl">
               <MdHelp size={25} className="mr-4" /> Help

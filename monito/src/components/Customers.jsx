@@ -11,6 +11,7 @@ import "../styles.css";
 
 // Import required modules
 import { FreeMode, Pagination } from "swiper/modules";
+import OnePet from "./OnePet";
 
 const App = () => {
   const [customers, setCustomers] = useState([]);
@@ -31,38 +32,42 @@ const App = () => {
   return (
     <>
       <div className=" p-2">
-        <p className=" text-[24px] font-bold text-custom-blue">Our Lovely Customers</p>
+        <p className=" text-[24px] font-bold text-custom-blue">
+          Our Lovely Customers
+        </p>
       </div>
       <div className=" p-2">
-      <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
-        freeMode={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[FreeMode, Pagination]}
-        className="mySwiper mt-5"
-      >
-        {customers.length > 0 ? (
-          customers.map((cus, index) => (
-            <SwiperSlide key={index}>
-              <div className="relative lg:hidden block md:block">
-                <img className="w-full" src={cus.image} alt="Customer" />
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          freeMode={true}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[FreeMode, Pagination]}
+          className="mySwiper mt-5"
+        >
+          {customers.length > 0 ? (
+            customers.map((cus, index) => (
+              <SwiperSlide key={index}>
+                <div className="relative  block md:block">
+                  <img className="w-full" src={cus.image} alt="Customer" />
+                </div>
+              </SwiperSlide>
+            ))
+          ) : (
+            <SwiperSlide>
+              <div className="relative">
+                <p>No customers found.</p>
               </div>
             </SwiperSlide>
-          ))
-        ) : (
-          <SwiperSlide>
-            <div className="relative">
-              <p>No customers found.</p>
-            </div>
-          </SwiperSlide>
-        )}
+          )}
 
-        {/* Dynamic Customer Slides */}
-      </Swiper>
+        
+        </Swiper>
       </div>
+
+      
     </>
   );
 };

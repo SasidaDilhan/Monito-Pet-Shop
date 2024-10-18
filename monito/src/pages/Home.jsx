@@ -24,7 +24,7 @@ const Home = () => {
         <PetKnowladge />
       </div>
       <Footer />
-      <OnePet />
+    
     </>
   );
 };
